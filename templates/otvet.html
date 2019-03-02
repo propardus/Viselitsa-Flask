@@ -3,8 +3,8 @@
 {% block content %}
 
 
-    <form action="/send">
-        <input type="text" placeholder="Буква...">
+    <form action="/send" method="post">
+        <input type="text" name="char" placeholder="Буква..." autofocus>
         <input type="submit">
     </form>
     <img src="{{ url_for('static', filename='viselitsa.jpg') }}" alt="">
