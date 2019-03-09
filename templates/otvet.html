@@ -4,12 +4,19 @@
 
 
     <form action="/send" method="post">
-        <input type="text" name="char" placeholder="Буква..." autofocus>
-        <input type="submit">
+        <input type="text" name="char" placeholder="Буква..." autocomplete="off" minlength="1" maxlength="1" a autofocus>
+        <input type="submit" class="btn btn-success">
     </form>
+
     <img src="{{ url_for('static', filename='viselitsa.jpg') }}" alt="">
     <h1>{{ x_word }}</h1>
-    <h4>{{ answer }}</h4>
-    <img src="{{ url_for('static', filename='Pink-Heart-PNG-Background-Image.png.') }}" alt="">
-{{live}}
+<span id="hearts">
+{%for a in range( live )%}
+    ♥
+    {%endfor%}
+</span>
+<div>
+    <a class="btn btn-primary" href="/logout" role="button">Я сдаюсь!</a>
+    <a class="btn btn-outline-primary" href="/results" role="button">Результаты</a>
+</div>
 {% endblock %}

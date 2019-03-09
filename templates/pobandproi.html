@@ -1,0 +1,12 @@
+
+{% extends "1.html" %}
+{% block content %}
+
+
+
+    <img src="{{ url_for('static', filename='viselitsa.jpg') }}" alt="">
+    <h1>Вы-{{ ot }}!</h1>
+<h1>Ответ: {{ session['word'] }}</h1>
+    <a href="/results">Мои результаты</a>
+    <a href="/">Продолжить игру</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+
+{% extends "1.html" %}
+{% block content %}
+
+
+
+    <img src="{{ url_for('static', filename='viselitsa.jpg') }}" alt="">
+    <h1>Побед:{{ x_res }}</h1>
+    <h1>Поражений:{{ p_res }}</h1>
+    <a href="/">Назад</a>
+{% endblock %}
